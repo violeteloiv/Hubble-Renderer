@@ -3,7 +3,7 @@
 
 int main(void) {
     window_t* window = init_window(800, 600, "Vulkan Window");
-    renderer_t* renderer = init_renderer(window);
+    renderer_t* renderer = init_renderer(window, HUBBLE_VULKAN_API);
 
     while (!window_should_close(window)) {
         window_poll_events();

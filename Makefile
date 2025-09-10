@@ -3,7 +3,7 @@
 # Compiler and flags
 CC      := gcc
 CFLAGS  := -Wall -Wextra -fPIC -Ihubble/include -Ilibraries/glfw/include -IC:\VulkanSDK\1.4.321.1\Include
-LDFLAGS := -L. -Llibraries/glfw/lib-mingw-w64 -LC:\VulkanSDK\1.4.321.1\Lib -lglfw3 -lvulkan-1 -lgdi32 -luser32 -lshell32
+LDFLAGS := -L. -Llibraries/glfw/lib-mingw-w64 -LC:\VulkanSDK\1.4.321.1\Lib -lglfw3 -lvulkan-1 -lgdi32
 
 # Project structure
 HUBBLE_SRC   := $(wildcard hubble/src/*.c)
@@ -32,7 +32,7 @@ $(TEST_BIN): $(TEST_OBJ) $(HUBBLE_LIB)
 
 # Clean build files
 clean:
-	rm -f hubble/src/*.o test/src/*.o $(HUBBLE_LIB) $(TEST_BIN)
+	$(RM) hubble/src/*.o test/src/*.o $(HUBBLE_LIB) $(TEST_BIN)
 
 # Run test
 run: $(TEST_BIN)
