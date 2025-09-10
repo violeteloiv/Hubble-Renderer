@@ -2,3 +2,5 @@
 /libraries
 
 *.o
+*.dll
+*.exe
